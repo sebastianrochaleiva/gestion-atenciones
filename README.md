@@ -47,3 +47,36 @@ Las principales entidades son:
 
 ```http
 POST /api/auth/login
+
+📌 Endpoints principales
+🔹 Autenticación
+POST /api/auth/login → login y obtención de token JWT.
+
+🔹 Atenciones
+GET /api/atenciones → lista todas (solo ADMIN).
+GET /api/atenciones/mias → lista atenciones del paciente autenticado.
+POST /api/atenciones → crear atención (ADMIN, MEDICO).
+PUT /api/atenciones/{id} → actualizar atención (ADMIN, MEDICO).
+DELETE /api/atenciones/{id} → eliminar atención (solo ADMIN).
+
+🔹 Pacientes
+GET /api/pacientes → listar (solo ADMIN).
+POST /api/pacientes → crear (solo ADMIN).
+
+🔹 Empleados
+GET /api/empleados → listar (solo ADMIN).
+POST /api/empleados → crear (solo ADMIN).
+
+🔹 Especialidades
+GET /api/especialidades → listar (ADMIN, MEDICO, PACIENTE).
+POST /api/especialidades → crear (solo ADMIN).
+
+▶️ Cómo ejecutar
+1. Clonar el repositorio:
+  git clone https://github.com/usuario/gestion-atenciones.git
+  cd gestion-atenciones
+
+2. Compilar y ejecutar:
+  ./mvnw spring-boot:run
+
+3.Probar endpoints en Postman o similar.
